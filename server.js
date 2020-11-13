@@ -5,6 +5,7 @@
 var express = require('express');
 var moment = require("moment");
 var app = express();
+var dotenv = require("dotenv").config({ path: './.env '});
 
 // enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 // so that your API is remotely testable by FCC 
@@ -13,6 +14,9 @@ app.use(cors({optionSuccessStatus: 200}));  // some legacy browsers choke on 204
 
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
+
+// Basic Configuration 
+var port = process.env.PORT || 3000;
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function (req, res) {
@@ -59,6 +63,6 @@ app.get("/api/timestamp/:time", (req, res) => {
 })
 
 // listen for requests :)
-var listener = app.listen(process.env.PORT, function () {
-  console.log('Your app is listening on port ' + listener.address().port);
+app.listen(port, function () {
+  console.log('Node.js listening on port...' + port);
 });
