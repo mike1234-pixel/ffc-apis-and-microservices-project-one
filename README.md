@@ -2,6 +2,8 @@
 
 # Timestamp Microservice
 
+[![timestamp-microservice-screenshot](https://user-images.githubusercontent.com/57681651/99070872-fb8d3180-25a8-11eb-99ce-53bfe32a60d5.jpg)](https://timestamp-microservice-11.herokuapp.com/)
+
 ## User stories:
 
 1. The API endpoint is `GET [project_url]/api/timestamp/:date_string?`
@@ -23,3 +25,5 @@
 ## Packages
 
 The API is written in _Node.js_ with the help of _express_ and _moment.js_.
+
+[See the API!](https://timestamp-microservice-11.herokuapp.com/)
